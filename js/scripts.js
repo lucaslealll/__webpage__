@@ -57,12 +57,14 @@ window.addEventListener('DOMContentLoaded', event => {
 $(document).ready(function () {
     $('.customer-logos').slick({
         slidesToShow: 6,
-        slidesToScroll: 1,
+        slidesToScroll: 8, // Ajustado para 1 para um fluxo contínuo
         autoplay: true,
-        autoplaySpeed:900,
+        autoplaySpeed: 0, // Ajustado para 0 para fluxo contínuo
+        speed: 10000, // Ajuste a velocidade da rolagem (em milissegundos)
         arrows: false,
         dots: false,
-        pauseOnHover: true,
+        pauseOnHover: false, // Mudado para false para continuar ao passar o mouse
+        cssEase: 'linear', // Adicionado para um movimento contínuo
         responsive: [{
             breakpoint: 768,
             settings: {
